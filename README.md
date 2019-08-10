@@ -13,11 +13,9 @@ gofetch -f [file]
 gofetch will then proceed down the list of URLs and return the status code for each url. 
 
 gofetch -h
-Usage of gofetch:
-  -f string \
-      Specify file to read URLs from. (default "file") 
-  -file string \
-      Specify file to read URLs from. (default "file") 
+
+Usage of gofetch: \
+![Usage](https://github.com/DFC302/Gofetch/blob/master/images/usage.png)
       
 # Example
 ![Example](https://github.com/DFC302/Gofetch/blob/master/images/example.png)
