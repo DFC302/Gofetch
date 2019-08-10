@@ -56,6 +56,8 @@ func main() {
        	// If url has http:// or https://, leave it alone
         if strings.HasPrefix(line, "http://") || strings.HasPrefix(line, "https://") {
         	line = line
+        } else if line == "" { // if line is blank, pass it
+            continue
         } else { // else, assume https, append it to begining of url
         	https := "https://"
         	line = (https + line) // assume https
@@ -67,8 +69,8 @@ func main() {
 
         // if error should occur, print it, no fatal, continue with requests
         if err != nil{
-        	fmt.Println(err)
-        	fmt.Println()
+            fmt.Println(err)
+            fmt.Println()
         	continue
         }
 
@@ -82,4 +84,5 @@ func main() {
 	 if err := scanner.Err(); err != nil {
         log.Fatal(err)
     }
+    os.Exit(0)
 }
