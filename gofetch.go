@@ -84,5 +84,4 @@ func main() {
 	 if err := scanner.Err(); err != nil {
         log.Fatal(err)
     }
-    os.Exit(0)
 }
